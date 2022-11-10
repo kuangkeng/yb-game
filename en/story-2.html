@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Navigate Malaysia’s Covid-19 infodemic in this choose-your-own adventure game">
+<meta name="author" content="MILE">
+<link rel="icon" href="https://choicesimake.com/img/favicon.png">
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<meta name="robots" content="follow, index" />
+<meta property="fb:app_id" content="538195677154105" />
+<meta property="og:site_name" content="Malaysia Information Literacy Education" />
+<meta property="article:publisher" content="https://www.facebook.com/milemsia" />
+<meta property="article:author" content="Malaysia Information Literacy Education" />
+<meta property="article:section" content="Game" />
+<meta property="og:locale" content="en_MY" />
+
+<!-- ### Story Metadata, Important for social sharing. Look for the word Insert and add in custom data there.-->
+<link rel="canonical" href="https://choicesimake.com/en/index.html" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://choicesimake.com/en/index.html" />
+<meta name="twitter:url" content="https://choicesimake.com/en/index.html" />
+<meta name="twitter:title" content="Choices I Make" />
+<meta name="twitter:image:src" content="https://choicesimake.com/img/banner-en.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@milemsia" />
+<meta property="og:title" content="Choices I Make" />
+<meta property="og:description" content="Navigate Malaysia’s Covid-19 infodemic in this choose-your-own adventure game" />
+<meta property="og:image" content="https://choicesimake.com/img/banner-en.jpg" />
+<title>Choices I Make</title>
+
+<meta name="viewport" content="width=device-width">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta http-equiv="cleartype" content="on">
+
+<!-- ### Loading in base styles These should not be changed -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- ### KEEP for bootstrap - HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- ### Add in additional CSS Libraries here -->
+<link rel="stylesheet" type="text/css" href="../css/project.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P27V9YL0S1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P27V9YL0S1');
+</script>
+
+</head>
+<body>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '538195677154105',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v9.0'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=538195677154105&autoLogAppEvents=1" nonce="CrmwD78a"></script>
+
+  <div class="container main-container text">  
+    <div class="panel" id="panel-scenario">
+      <div class="top_logo"><img src="../img/logo_title_small.png" class="img-fluid" style="max-height:25px;" alt="game logo"></div>
+      <div class="scTitle text-right pt-2"><h6>THE FARM</h6></div>
+      <div class="my-3 scImg"></div>
+      <div class="scenarioBox">
+        <div class="scenario" id="scenario-0">
+          <div class="scText" id="scText-scenario-0"></div>        
+          <div class="scOption text-center" id="scOption-scenario-0"></div>
+        </div>
+      </div>
+      <div class="card border-warning info-box mx-auto" style="width:100%;">
+        <div class="card-header"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i> Quick fact</div>
+        <div class="card-body">
+          <p class="card-text"></p>
+          <div class="text-right"><button type="button" class="btn btn-sm btn-light btnClose">Close</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="endPanel">
+      <div class="card endMsg mb-2">
+        <h5 class="card-header text-center">More from the game</h5>
+        <div class="card-body box-lesson"></div>
+      </div>
+      <div class="card endPlay mb-2">
+        <h5 class="card-header text-center">Play again</h5>
+        <div class="card-body">
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-light mx-3" id="btnReplay" onClick="window.location.reload()">Replay</button>
+            <a href="index.html"><button type="button" class="btn btn-light mx-3" id="btnOther">Other characters</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="card endShare mb-2">
+        <h5 class="card-header text-center">Learned something new?<br>Share with your friends</h5>
+        <div class="card-body share-icons">
+          <div class="d-flex justify-content-center">
+            <i class="fab fa-facebook-square mx-3 btnFB"></i>
+            <i class="fab fa-twitter mx-3 btnTW"></i>
+            <i class="fab fa-whatsapp mx-3 btnWA"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card endLinks mb-2">
+        <h5 class="card-header text-center">Inspired by real events</h5>
+        <div class="card-body">
+          This fictional game is based on real-life events that took place during or before the Covid-19 pandemic in 2020.
+          <ul class="list-group list-group-flush list-links"></ul>
+        </div>
+      </div>
+      <div class="card endFeedback mb-2">
+        <h5 class="card-header text-center">Your feedback</h5>
+        <div class="card-body">
+          <ol class="list-group list-group-flush">
+            <li class="list-group-item story-links">
+              <div>Does this game help you understand the issue of misinformation better?</div>
+              <div class="d-flex justify-content-center mt-2">
+                <button type="button" class="btn btn-success mx-1 btnFeedback-1" value="yes" id="feedback-1-yes">Yes</button>
+                <button type="button" class="btn btn-danger mx-1 btnFeedback-1" value="no" id="feedback-1-no">No</button>
+                <button type="button" class="btn btn-warning mx-1 btnFeedback-1" value="maybe" id="feedback-1-maybe">Maybe</button>
+                <button type="button" class="btn btn-info mx-1 btnFeedbackDone-1" id="feedback-1-done">Thank you</button>
+              </div>
+            </li>
+            <li class="list-group-item story-links">
+              <div>Does this game help you learn new skills in evaluating online information?</div>
+              <div class="d-flex justify-content-center mt-2">
+                <button type="button" class="btn btn-success mx-1 btnFeedback-2" value="yes" id="feedback-2-yes">Yes</button>
+                <button type="button" class="btn btn-danger mx-1 btnFeedback-2" value="no" id="feedback-2-no">No</button>
+                <button type="button" class="btn btn-warning mx-1 btnFeedback-2" value="maybe" id="feedback-2-maybe">Maybe</button>
+                <button type="button" class="btn btn-info mx-1 btnFeedbackDone-2" id="feedback-2-done">Thank you</button>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="card endCredits">
+        <h5 class="card-header text-center">Credits</h5>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <div class="row mb-3">
+              <div class="col-sm-3 col-4 text-center pr-0 d-flex align-items-center justify-content-center">
+                <a href='https://www.facebook.com/milemsia' target='_blank'><img src="../img/MILE-logo-horizontal.png" class="img-fluid" style="max-height:60px;" alt="MILE logo"></a>
+              </div>
+              <div class="col-sm-3 col-2 text-center d-flex align-items-center justify-content-center">
+                <a href='https://studiobehind90.com/' target='_blank'><img src="../img/behind90-logo.png" class="img-fluid" style="max-height:60px;" alt="Studio Behind 90 logo"></a>
+              </div>
+              <div class="col-sm-3 col-3 text-center pl-0 d-flex align-items-center justify-content-center">
+                <a href='https://iwpr.net/' target='_blank'><img src="../img/iwpr-logo.png" class="img-fluid" style="max-height:60px;" alt="IWPR logo"></a>
+              </div>
+              <div class="col-sm-3 col-3 text-center pl-0 d-flex align-items-center justify-content-center">
+                <a href='http://www.nationbuildingschool.com/' target='_blank'><img src="../img/nbs-logo.png" class="img-fluid" style="max-height:60px;" alt="NBS logo"></a>
+              </div>
+            </div>
+            <p>Published by <a href='https://www.facebook.com/milemsia' target='_blank'>Malaysia Information Literacy Education (MILE)</a> and <a href='https://studiobehind90.com/' target='_blank'>Studio Behind 90</a> on Feb 1, 2021 with the support from the <a href='https://iwpr.net/' target='_blank'>Institute for War & Peace Reporting</a>.</p>
+            
+            <li class="list-group-item story-links">
+              <div>
+                <div class="card-subtitle text-muted">Developer</div>
+                <div><a href='https://twitter.com/kuangkeng/' target='_blank'>Kuek Ser Kuang Keng</a></div>
+              </div>
+            </li> 
+            <li class="list-group-item story-links">
+              <div>
+                <div class="card-subtitle text-muted">Illustration & design</div>
+                <div><a href='https://studiobehind90.com/' target='_blank'>Studio Behind 90</a></div>
+              </div>
+            </li> 
+            <li class="list-group-item story-links"> 
+              <div>
+                <div class="card-subtitle text-muted">Script writers</div>
+                <div><a href='https://twitter.com/darshkanda' target='_blank'>Darshini Kandasamy</a> & <a href='https://twitter.com/kuangkeng/' target='_blank'>Kuek Ser Kuang Keng</a></div>
+              </div>
+            </li> 
+            <li class="list-group-item story-links">  
+              <div>
+                <div class="card-subtitle text-muted">Research & support</div>
+                <div><a href='https://nanyjharon.net/' target='_blank'>Hazwany Jamaluddin</a></div>
+              </div>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info-background"></div>
+
+  <!-- /container -->
+
+  <!-- ### END BODY -->
+
+  <!-- ### KEEP  Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/679ed1f09d.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../js/data-en.js"></script>
+  <script type="text/javascript" src="../js/story-en.js"></script>
+  <script type="text/javascript" src="../js/share-en.js"></script>
+</body>
+</html>
