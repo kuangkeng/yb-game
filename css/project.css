@@ -3,10 +3,8 @@ body, html {background:#000; -ms-scrollbar-base-color: #ffffff; scrollbar-face-c
 .panel::-webkit-scrollbar { display: none; }
 
 .main-container {
-     max-width: 800px;
-     background-image: url("../img/background.png");
-     background-size: cover;
-     background-position: center;
+     max-width: 490px;
+     background-color: #f7f2db;
 }
 .scImg {
      background-image: url("");
@@ -46,8 +44,9 @@ body, html {background:#000; -ms-scrollbar-base-color: #ffffff; scrollbar-face-c
      display:none;
 }
 .info-box {
-     color:#212529;
-     background:#fbcd57;
+     color:#fff;
+     background:#be1f12 !important;
+     border-color: #be1f12 !important;
      z-index: 5;
      position: absolute;
      bottom:15px;
@@ -64,7 +63,7 @@ body, html {background:#000; -ms-scrollbar-base-color: #ffffff; scrollbar-face-c
      display:none;
 }
 .panel {
-     color:#ffffff;
+     color:#212427;
      position: relative;
      width: 100%;
      max-width: 800px;
@@ -128,6 +127,24 @@ body, html {background:#000; -ms-scrollbar-base-color: #ffffff; scrollbar-face-c
      position: absolute;
      top:10px;
      left:0px;
+}
+
+.btnOpt {
+     background-color: #f0a40f !important;
+     color:#fff;
+}
+
+.btnOptImg {
+     background-size: 140% 140%;
+     /* background-size: cover; */
+     /* background-size: contain; */
+     background-position: center center;
+     margin: 0 auto;
+     background-repeat:no-repeat;
+     /* -webkit-background-size:cover;
+     -moz-background-size:cover;
+     -o-background-size:cover; */
+     background-color: rgba(0, 0, 0, 0) !important;
 }
 
 @media (max-width: 500px ) { 

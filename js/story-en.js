@@ -72,15 +72,22 @@ function makeSc(btnTitle, scLast) {
     return (n.id ==  btnTitle);
   },false);
   //populate the scenario panel
-  $('.scenarioBox').append('<div class="scenario" id="'+ btnTitle +'"></div>');
-  $('#' + btnTitle).html('<div class="scText" id="scText-'+ btnTitle +'">' + scData[0].text + '</div><div class="mb-3 scMore text-right" id="scMore-'+ btnTitle +'"></div><div class="scOption text-center" id="scOption-'+ btnTitle +'"></div>');
+    if(scData[0].optNum == 0) {
+      $('.scenarioBox').append('<div class="scenario" id="'+ btnTitle +'"></div>');
+      $('#' + btnTitle).html('<div class="scText" id="scText-'+ btnTitle +'">' + scData[0].text + '</div><div class="scOption text-center" id="scOption-'+ btnTitle +'"></div><div class="scMore text-center" id="scMore-'+ btnTitle +'" style="margin-bottom:-10px; margin-top:-10px;"></div>');
+    } else {
+      $('.scenarioBox').append('<div class="scenario" id="'+ btnTitle +'"></div>');
+      $('#' + btnTitle).html('<div class="scText" id="scText-'+ btnTitle +'">' + scData[0].text + '</div><div class="scOption text-center" id="scOption-'+ btnTitle +'"></div><div class="scMore text-center" id="scMore-'+ btnTitle +'" style="margin-bottom:-10px; margin-top:-10px;"></div>');
+    }
+  
   
   //populate the button
   function makeBtn() {
     if(scData[0].optNum == 0) {
       $('#scOption-' + btnTitle).append('<button type="button" class="btn btn-light btn-sm btnOpt" data-id="'+ scData[0].target0 +'">'+ scData[0].opt0 +'</button>');
     } else {
-      $('#scOption-' + btnTitle).append('<div class="row"><div class="col"><button type="button" class="btn btn-light btn-sm btnOpt" data-id="'+ scData[0].target0 +'">'+ scData[0].opt0 +'</button></div><div class="col"><button type="button" class="btn btn-light btn-sm btnOpt" data-id="'+ scData[0].target1 +'">'+ scData[0].opt1 +'</button></div></div>');
+      $('#scOption-' + btnTitle).append('<div class="row"><div class="col" style="padding-right:2px;"><div class="btnOpt btnOptImg" data-id="'+ scData[0].target0 +'" style="background-image: url('+ scData[0].img1 +'); height:'+imgHeight +'px;"></div></div><div class="col" style="padding-left:2px;"><div class="btnOpt btnOptImg" data-id="'+ scData[0].target1 +'" style="background-image: url('+ scData[0].img2 +'); height:'+imgHeight +'px;"></div></div>');
+      // $('#scOption-' + btnTitle).append('<div class="row"><div class="col"><div class="btnOpt" data-id="'+ scData[0].target0 +'" style="background-color: rgba(0,0,0,0) !important; width: auto; height:auto;"><img src='+ scData[0].img1 +' style="width:100%; height:auto;"></div></div><div class="col"><div class="btnOpt" data-id="'+ scData[0].target1 +'">'+ scData[0].opt1 +'></div></div>');
     }
   }
 
@@ -125,16 +132,21 @@ function makeSc(btnTitle, scLast) {
   }
 
   //populate the image
-  if(scData[0].optImg == 1) {
+  if(scData[0].optImg == 1 && scData[0].optNum == 0) {
     $('.scImg').fadeOut(500, function (){ 
       $(".scImg").css('background-image','url('+ scData[0].img +')');
+      $('.scImg').fadeIn(500);
+    });
+  } else if (scData[0].optImg == 1 && scData[0].optNum == 1) {
+    $('.scImg').fadeOut(500, function (){ 
+      $(".scImg").css('background-image','');
       $('.scImg').fadeIn(500);
     });
   }
 
   //populate the info box
   if(scData[0].more == 1) {
-    $('#scMore-' + btnTitle).append('<button type="button" class="btn btn-danger btn-sm btnMore" id="info-'+ btnTitle +'"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i> Learn more</button>');
+    $('#scMore-' + btnTitle).append('<img src="../img/story-0/infobox.svg" class="btnMore" width="80" height="100">');
     $('.card-text').html(scData[0].info);
   } 
 }
