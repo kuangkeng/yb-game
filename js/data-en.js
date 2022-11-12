@@ -108,8 +108,7 @@ var dataset = [
 		{
 			"id":"scenario-A1",
 			"text":"<p>This changes nothing. After all, this only reaffirms your belief she is the best candidate.</p>",
-			"img1":"../img/story-0/3a.svg",
-			"img2":"../img/story-0/3b.svg",
+			"img":"../img/story-0/4.svg",
 			"more":0,
 			"info":"",
 			"optNum":0,
@@ -142,7 +141,7 @@ var dataset = [
 		{
 			"id":"scenario-B",
 			"text":"After all, she seems too good to be true. Doesn't hurt to consider all options.",
-			"img":"../img/story-0/3b.svg",
+			"img":"../img/story-0/5.svg",
 			"more":1,
 			"info":"<p>When something you read or someone says sounds too good to be true, it sometimes can be. You should try to vet information or seek to learn more about an issue/claim/candidate/their party before committing to an opinion.</p>",
 			"optNum":0,
@@ -331,14 +330,10 @@ var dataset = [
 			"id":"scenario-end",
 			"text":"<p>It is the right of every citizen to vote come election time! But it isn't always easy, what with the amount of propaganda, fake news and other tricks waiting to deceive voters. To make things worse, our own biases (we all have them!) can sometimes get in the way of us making the right choice. Learning to identify political and divisive propaganda, misinformation and bias can help you take charge and make an informed choice that's most beneficial to you and country.</p>",
 			"endLinks":[
-				"<a href='https://fivethirtyeight.com/features/why-a-gamer-started-a-web-of-disinformation-sites-aimed-at-latino-americans/' target='_blank'>Why A Gamer Started A Web Of Disinformation Sites Aimed At Latino Americans</a>",
-				"<a href='https://coconuts.co/kl/news/malaysia-man-criticized-after-naming-black-man-number-one-suspect-in-us-shooting/' target='_blank'>Malaysia man criticized after naming Black man ‘number one suspect’ in US shooting</a>",
-				"<a href='https://www.twreporter.org/a/information-warfare-business-disinformation-fake-news-behind-line-groups-english' target='_blank'>The Content Mill Empire Behind Online Disinformation in Taiwan</a>",
-				"<a href='https://www.bbc.com/future/article/20190528-i-was-a-macedonian-fake-news-writer' target='_blank'>‘I was a Macedonian fake news writer’</a>",
-				"<a href='https://www.nytimes.com/interactive/2018/01/27/technology/social-media-bots.html' target='_blank'>The Follower Factory</a>",
-				"<a href='https://www.nytimes.com/interactive/2018/08/11/technology/youtube-fake-view-sellers.html' target='_blank'>The Flourishing Business of Fake YouTube Views</a>",
-				"<a href='https://edition.cnn.com/videos/business/2020/12/25/queen-elizabeth-deepfake.cnn' target='_blank'>Watch 'deepfake' Queen deliver alternative Christmas speech</a>",
-				"<a href='https://www.theatlantic.com/politics/archive/2020/05/china-disinformation-propaganda-united-states-xi-jinping/612085/' target='_blank'>How China Is Planning to Win Back the World</a>",
+				"<a href='https://www.youtube.com/watch?v=Jqt7B857ooM' target='_blank'>The Vaccine for Fake News</a>",
+				"<a href='https://sea.mashable.com/tech/20996/for-gen-z-tiktok-is-more-than-entertainment-its-a-search-engine' target='_blank'>For Gen Z, TikTok is more than entertainment. It's a search engine.</a>",
+				"<a href='https://www.malaymail.com/news/malaysia/2021/01/14/report-malaysian-cybertrooper-teams-employ-full-time-staff-used-by-politici/1940305' target='_blank'>Report: Malaysian cybertrooper teams employ full-time staff, used by politicians and businesses alike</a>",
+				"<a href='https://inoculation.science/inoculation-videos/' target='_blank'>Short videos that inoculate against misinformation online</a>",
 			]
 		}
 	]	

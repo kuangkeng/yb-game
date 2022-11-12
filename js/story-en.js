@@ -18,7 +18,7 @@ function init() {
   $('.scImg').css("height",imgHeight + "px");
   $('.scImg').css('background-image','url('+ selectedData[0].img +')');
   $('#scText-scenario-0').html(selectedData[0].text);
-  $('#scOption-scenario-0').append('<button type="button" class="btn btn-light btn-sm btnOpt" data-id="'+ selectedData[0].target0 +'">'+ selectedData[0].opt0 +'</button>');
+  $('#scOption-scenario-0').append('<button type="button" class="btn btnOpt btnOptText" data-id="'+ selectedData[0].target0 +'">'+ selectedData[0].opt0 +'</button>');
   $('#scenario-0').fadeIn(500); 
   
   $(document).on('click', '.btnOpt', function(){
@@ -72,22 +72,23 @@ function makeSc(btnTitle, scLast) {
     return (n.id ==  btnTitle);
   },false);
   //populate the scenario panel
-    if(scData[0].optNum == 0) {
+    if(scData[0].info == 0) {
       $('.scenarioBox').append('<div class="scenario" id="'+ btnTitle +'"></div>');
-      $('#' + btnTitle).html('<div class="scText" id="scText-'+ btnTitle +'">' + scData[0].text + '</div><div class="scOption text-center" id="scOption-'+ btnTitle +'"></div><div class="scMore text-center" id="scMore-'+ btnTitle +'" style="margin-bottom:-10px; margin-top:-10px;"></div>');
+      $('#' + btnTitle).html('<div class="scText" id="scText-'+ btnTitle +'">' + scData[0].text + '</div><div class="scOption text-center" id="scOption-'+ btnTitle +'"></div>');
     } else {
       $('.scenarioBox').append('<div class="scenario" id="'+ btnTitle +'"></div>');
-      $('#' + btnTitle).html('<div class="scText" id="scText-'+ btnTitle +'">' + scData[0].text + '</div><div class="scOption text-center" id="scOption-'+ btnTitle +'"></div><div class="scMore text-center" id="scMore-'+ btnTitle +'" style="margin-bottom:-10px; margin-top:-10px;"></div>');
+      $('#' + btnTitle).html('<div class="scText" id="scText-'+ btnTitle +'">' + scData[0].text + '</div><div class="row"><div class="col-10 scOption text-center" id="scOption-'+ btnTitle +'" style="display: grid; padding-right:0px;"></div><div class="col-2 scMore text-center" id="scMore-'+ btnTitle +'" style="padding-left:0px;"></div></div>');
+      $('#scMore-' + btnTitle).append('<img src="../img/story-0/infobox.svg" class="btnMore" width="auto" height="90%">');
+      $('.card-text').html(scData[0].info);
     }
-  
   
   //populate the button
   function makeBtn() {
     if(scData[0].optNum == 0) {
-      $('#scOption-' + btnTitle).append('<button type="button" class="btn btn-light btn-sm btnOpt" data-id="'+ scData[0].target0 +'">'+ scData[0].opt0 +'</button>');
+      $('#scOption-' + btnTitle).append('<button type="button" class="btn btnOpt btnOptText" data-id="'+ scData[0].target0 +'" style="margin: auto;">'+ scData[0].opt0 +'</button>');
     } else {
       $('#scOption-' + btnTitle).append('<div class="row"><div class="col" style="padding-right:2px;"><div class="btnOpt btnOptImg" data-id="'+ scData[0].target0 +'" style="background-image: url('+ scData[0].img1 +'); height:'+imgHeight +'px;"></div></div><div class="col" style="padding-left:2px;"><div class="btnOpt btnOptImg" data-id="'+ scData[0].target1 +'" style="background-image: url('+ scData[0].img2 +'); height:'+imgHeight +'px;"></div></div>');
-      // $('#scOption-' + btnTitle).append('<div class="row"><div class="col"><div class="btnOpt" data-id="'+ scData[0].target0 +'" style="background-color: rgba(0,0,0,0) !important; width: auto; height:auto;"><img src='+ scData[0].img1 +' style="width:100%; height:auto;"></div></div><div class="col"><div class="btnOpt" data-id="'+ scData[0].target1 +'">'+ scData[0].opt1 +'></div></div>');
+      $('#scText-'+btnTitle).addClass("scTextOpt");
     }
   }
 
@@ -144,11 +145,8 @@ function makeSc(btnTitle, scLast) {
     });
   }
 
-  //populate the info box
-  if(scData[0].more == 1) {
-    $('#scMore-' + btnTitle).append('<img src="../img/story-0/infobox.svg" class="btnMore" width="80" height="100">');
-    $('.card-text').html(scData[0].info);
-  } 
+  //populate the info box - this had been done earlier for this version
+  if(scData[0].more == 1) {} 
 }
 
 //Function to get journey num from url
