@@ -18,7 +18,7 @@ function init() {
   $('.scImg').css("height",imgHeight + "px");
   $('.scImg').css('background-image','url('+ selectedData[0].img +')');
   $('#scText-scenario-0').html(selectedData[0].text);
-  $('#scOption-scenario-0').append('<button type="button" class="btn btn-light btn-sm btnOpt" data-id="'+ selectedData[0].target0 +'">'+ selectedData[0].opt0 +'</button>');
+  $('#scOption-scenario-0').append('<button type="button" class="btn btnOpt btnOptText" data-id="'+ selectedData[0].target0 +'">'+ selectedData[0].opt0 +'</button>');
   $('#scenario-0').fadeIn(500); 
   
   $(document).on('click', '.btnOpt', function(){
@@ -72,15 +72,23 @@ function makeSc(btnTitle, scLast) {
     return (n.id ==  btnTitle);
   },false);
   //populate the scenario panel
-  $('.scenarioBox').append('<div class="scenario" id="'+ btnTitle +'"></div>');
-  $('#' + btnTitle).html('<div class="scText" id="scText-'+ btnTitle +'">' + scData[0].text + '</div><div class="mb-3 scMore text-right" id="scMore-'+ btnTitle +'"></div><div class="scOption text-center" id="scOption-'+ btnTitle +'"></div>');
+    if(scData[0].info == 0) {
+      $('.scenarioBox').append('<div class="scenario" id="'+ btnTitle +'"></div>');
+      $('#' + btnTitle).html('<div class="scText" id="scText-'+ btnTitle +'">' + scData[0].text + '</div><div class="scOption text-center" id="scOption-'+ btnTitle +'"></div>');
+    } else {
+      $('.scenarioBox').append('<div class="scenario" id="'+ btnTitle +'"></div>');
+      $('#' + btnTitle).html('<div class="scText" id="scText-'+ btnTitle +'">' + scData[0].text + '</div><div class="row"><div class="col-10 scOption text-center" id="scOption-'+ btnTitle +'" style="display: grid; padding-right:0px;"></div><div class="col-2 scMore text-center" id="scMore-'+ btnTitle +'" style="padding-left:0px;"></div></div>');
+      $('#scMore-' + btnTitle).append('<img src="../img/story-0/infobox.svg" class="btnMore" width="auto" height="90%">');
+      $('.card-text').html(scData[0].info);
+    }
   
   //populate the button
   function makeBtn() {
     if(scData[0].optNum == 0) {
-      $('#scOption-' + btnTitle).append('<button type="button" class="btn btn-light btn-sm btnOpt" data-id="'+ scData[0].target0 +'">'+ scData[0].opt0 +'</button>');
+      $('#scOption-' + btnTitle).append('<button type="button" class="btn btnOpt btnOptText" data-id="'+ scData[0].target0 +'" style="margin: auto;">'+ scData[0].opt0 +'</button>');
     } else {
-      $('#scOption-' + btnTitle).append('<div class="row"><div class="col"><button type="button" class="btn btn-light btn-sm btnOpt" data-id="'+ scData[0].target0 +'">'+ scData[0].opt0 +'</button></div><div class="col"><button type="button" class="btn btn-light btn-sm btnOpt" data-id="'+ scData[0].target1 +'">'+ scData[0].opt1 +'</button></div></div>');
+      $('#scOption-' + btnTitle).append('<div class="row"><div class="col" style="padding-right:2px;"><div class="btnOpt btnOptImg" data-id="'+ scData[0].target0 +'" style="background-image: url('+ scData[0].img1 +'); height:'+imgHeight +'px;"></div></div><div class="col" style="padding-left:2px;"><div class="btnOpt btnOptImg" data-id="'+ scData[0].target1 +'" style="background-image: url('+ scData[0].img2 +'); height:'+imgHeight +'px;"></div></div>');
+      $('#scText-'+btnTitle).addClass("scTextOpt");
     }
   }
 
@@ -102,7 +110,7 @@ function makeSc(btnTitle, scLast) {
       $('.list-links').append('<li class="list-group-item story-links">'+ endLinks[i] +'</li>');  
     }
     $('#' + scLast).fadeOut(500, function (){ 
-      $('.scenarioBox').append('<div class="theEndBox"><div class="theEnd rounded h5 text-center p-2 mb-0"><span class="text-center downArrow"><i class="fas fa-chevron-down"></i></span>&nbsp;&nbsp;&nbsp;完&nbsp;&nbsp;&nbsp;<span class="text-center downArrow"><i class="fas fa-chevron-down"></i></span></div></div>');
+      $('.scenarioBox').append('<div class="theEndBox"><div class="theEnd rounded h5 text-center p-2 mb-0"><span class="text-center downArrow"><i class="fas fa-chevron-down"></i></span>&nbsp;&nbsp;&nbsp;- 完 -&nbsp;&nbsp;&nbsp;<span class="text-center downArrow"><i class="fas fa-chevron-down"></i></span></div></div>');
       $('#' + btnTitle).fadeIn(500);
     });
     $('.box-lesson').html(endData[0].text);
@@ -125,18 +133,20 @@ function makeSc(btnTitle, scLast) {
   }
 
   //populate the image
-  if(scData[0].optImg == 1) {
+  if(scData[0].optImg == 1 && scData[0].optNum == 0) {
     $('.scImg').fadeOut(500, function (){ 
       $(".scImg").css('background-image','url('+ scData[0].img +')');
       $('.scImg').fadeIn(500);
     });
+  } else if (scData[0].optImg == 1 && scData[0].optNum == 1) {
+    $('.scImg').fadeOut(500, function (){ 
+      $(".scImg").css('background-image','');
+      $('.scImg').fadeIn(500);
+    });
   }
 
-  //populate the info box
-  if(scData[0].more == 1) {
-    $('#scMore-' + btnTitle).append('<button type="button" class="btn btn-danger btn-sm btnMore" id="info-'+ btnTitle +'"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i> 了解更多</button>');
-    $('.card-text').html(scData[0].info);
-  } 
+  //populate the info box - this had been done earlier for this version
+  if(scData[0].more == 1) {} 
 }
 
 //Function to get journey num from url
@@ -146,24 +156,24 @@ function getUrl(){
 }
 
 function tweet() {
-  var tweet_msg = "这个由@milemsia开发的角色扮演游戏，让我对#Covid19新冠肺炎疫情所引发的虚假与错误讯息浪潮，有更深一层的认识。这个游戏简单又好玩，推荐你也来试一试！";
+  var tweet_msg = "选举来了！你以为要投给自己所属意的候选人这么容易吗？这个超级好玩的游戏由MileMsia制作，让你扮演首投族，看看你怎么选择！";
   var tweet_url = 'https://twitter.com/intent/tweet?related=milemsia&text=';
   tweet_url += encodeURIComponent(tweet_msg);
-  tweet_url += '&url=https://choicesimake.com/zh/index.html&via=milemsia&hashtags=资讯识读';
+  tweet_url += '&url=choicesimake.com/yangbijak/zh/index.html&via=milemsia&hashtags=资讯识读';
   window.open(tweet_url,'_blank');
 }
 
-function whatsapp(){
-  var whatsapp_msg = "这个由MILE开发的角色扮演游戏，让我对#Covid19新冠肺炎疫情所引发的虚假与错误讯息浪潮，有更深一层的认识。这个游戏简单又好玩，推荐你也来试一试！"
-  var whatsapp_url = "whatsapp://send/?text=";
-  whatsapp_url += encodeURIComponent(whatsapp_msg);
-  whatsapp_url += ' https://choicesimake.com/zh/index.html';
-  window.open(whatsapp_url,'_blank');
+function facebook(){
+  var facebook_url = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchoicesimake.com%2Fyangbijak%2Fzh%2F&amp;src=sdkpreparse";
+  window.open(facebook_url,'_blank');
 }
 
-function facebook(){
-  var facebook_url = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fchoicesimake.com%2Fzh%2F&amp;src=sdkpreparse";
-  window.open(facebook_url,'_blank');
+function whatsapp(){
+  var whatsapp_msg = "选举来了！你以为要投给自己所属意的候选人这么容易吗？这个超级好玩的游戏由MileMsia制作，让你扮演首投族，看看你怎么选择！"
+  var whatsapp_url = "whatsapp://send/?text=";
+  whatsapp_url += encodeURIComponent(whatsapp_msg);
+  whatsapp_url += ' https://choicesimake.com/yangbijak/zh/index.html';
+  window.open(whatsapp_url,'_blank');
 }
 
 function sendData(input1, input2, input3) {
