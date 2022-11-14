@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Kemudi infodemik Covid-19 Malaysia melalui permainan ini dengan memilih pengembaraan anda sendiri">
+<meta name="description" content="Tangani berita palsu, bias dan propaganda, dan buang undi anda dalam permainan pilihan raya yang menyeronokkan ini!">
 <meta name="author" content="MILE">
-<link rel="icon" href="https://choicesimake.com/img/favicon.png">
+<link rel="icon" href="https://choicesimake.com/yangbijak/img/favicon.png">
 <meta http-equiv="x-dns-prefetch-control" content="on" />
 <meta name="robots" content="follow, index" />
 <meta property="fb:app_id" content="538195677154105" />
@@ -16,19 +16,18 @@
 <meta property="article:section" content="Game" />
 <meta property="og:locale" content="ms_MY" />
 
-<!-- ### Story Metadata, Important for social sharing. Look for the word Insert and add in custom data there.-->
-<link rel="canonical" href="https://choicesimake.com/my/index.html" />
+<link rel="canonical" href="https://choicesimake.com/yangbijak/my/index.html" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://choicesimake.com/my/index.html" />
-<meta name="twitter:url" content="https://choicesimake.com/my/index.html" />
-<meta name="twitter:title" content="Pilihan Aku" />
-<meta name="twitter:image:src" content="https://choicesimake.com/img/banner-my.jpg" />
+<meta property="og:url" content="https://choicesimake.com/yangbijak/my/index.html" />
+<meta name="twitter:url" content="https://choicesimake.com/yangbijak/my/index.html" />
+<meta name="twitter:title" content="Apakah anda Yang Bijak?" />
+<meta name="twitter:image:src" content="https://choicesimake.com/yangbijak/img/banner-my.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@milemsia" />
-<meta property="og:title" content="Pilihan Aku" />
-<meta property="og:description" content="Kemudi infodemik Covid-19 Malaysia melalui permainan ini dengan memilih pengembaraan anda sendiri" />
-<meta property="og:image" content="https://choicesimake.com/img/banner-my.jpg" />
-<title>Pilihan Aku</title>
+<meta property="og:title" content="Apakah anda Yang Bijak?" />
+<meta property="og:description" content="Tangani berita palsu, bias dan propaganda, dan buang undi anda dalam permainan pilihan raya yang menyeronokkan ini!" />
+<meta property="og:image" content="https://choicesimake.com/yangbijak/img/banner-my.jpg" />
+<title>Apakah anda Yang Bijak?</title>
 
 <meta name="viewport" content="width=device-width">
 <meta name="MobileOptimized" content="width">
@@ -37,6 +36,8 @@
 
 <!-- ### Loading in base styles These should not be changed -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Russo One&display=swap" rel="stylesheet">
 <!-- ### KEEP for bootstrap - HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -84,8 +85,8 @@
 
   <div class="container main-container text">  
     <div class="panel" id="panel-scenario">
-      <div class="top_logo"><img src="../img/logo_title_small.png" class="img-fluid" style="max-height:25px;" alt="game logo"></div>
-      <div class="scTitle text-right pt-2"><h6>PENAWAR</h6></div>
+      <div class="top_logo"><img src="../img/game-logo.svg" class="img-fluid" style="max-height:40px; width: 70px" alt="game logo"></div>
+      <div class="scTitle text-right pt-4"><h6>KALI PERTAMA</h6></div>
       <div class="my-3 scImg"></div>
       <div class="scenarioBox">
         <div class="scenario" id="scenario-0">
@@ -94,7 +95,7 @@
         </div>
       </div>
       <div class="card border-warning info-box mx-auto" style="width:100%;">
-        <div class="card-header"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i> Semak fakta</div>
+        <div class="card-header"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i> Ketahui lebih lanjut</div>
         <div class="card-body">
           <p class="card-text"></p>
           <div class="text-right"><button type="button" class="btn btn-sm btn-light btnClose">Tutup</button></div>
@@ -107,11 +108,11 @@
         <div class="card-body box-lesson"></div>
       </div>
       <div class="card endPlay mb-2">
-        <h5 class="card-header text-center">Bermain sekali lagi</h5>
+        <!-- <h5 class="card-header text-center">Play again</h5> -->
         <div class="card-body">
           <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-light mx-3" id="btnReplay" onClick="window.location.reload()">Main semula</button>
-            <a href="index.html"><button type="button" class="btn btn-light mx-3" id="btnOther">Watak-watak lain</button></a>
+            <button type="button" class="btn btnOptText mx-3" id="btnReplay" onClick="window.location.reload()">Ulang semula</button>
+            <!-- <a href="index.html"><button type="button" class="btn btn-light mx-3" id="btnOther">Other characters</button></a> -->
           </div>
         </div>
       </div>
@@ -126,9 +127,8 @@
         </div>
       </div>
       <div class="card endLinks mb-2">
-        <h5 class="card-header text-center">Diinspirasikan oleh kisah sebenar</h5>
+        <h5 class="card-header text-center">Kalau ada masa, baca ini juga!</h5>
         <div class="card-body">
-          Ini merupakan permainan fiksyen yang berdasarkan dari peristiwa sebenar yang berlaku semasa pandemik Covid-19 pada tahun 2020.
           <ul class="list-group list-group-flush list-links"></ul>
         </div>
       </div>
@@ -137,7 +137,7 @@
         <div class="card-body">
           <ol class="list-group list-group-flush">
             <li class="list-group-item story-links">
-              <div>Adakah permainan ini membantu anda mempelajari isu berita palsu dengan lebih baik?</div>
+              <div>Adakah pemainan ini membantu anda lebih memahami isu propaganda piihan raya, maklumat palsu dan integriti, serta peranan dimainkan media sosial dan bias peribadi dalam proses menghadam maklumat?</div>
               <div class="d-flex justify-content-center mt-2">
                 <button type="button" class="btn btn-success mx-1 btnFeedback-1" value="yes" id="feedback-1-yes">Ya</button>
                 <button type="button" class="btn btn-danger mx-1 btnFeedback-1" value="no" id="feedback-1-no">Tidak</button>
@@ -146,7 +146,7 @@
               </div>
             </li>
             <li class="list-group-item story-links">
-              <div>Adakah permainan ini membantu anda mempelari kemahiran baru dalam menilai kualiti informasi di alam maya?</div>
+              <div>Adakah permainan ini membantu anda belajar kemahiran baharu dalam menilai maklumat berunsur politik? </div>
               <div class="d-flex justify-content-center mt-2">
                 <button type="button" class="btn btn-success mx-1 btnFeedback-2" value="yes" id="feedback-2-yes">Ya</button>
                 <button type="button" class="btn btn-danger mx-1 btnFeedback-2" value="no" id="feedback-2-no">Tidak</button>
@@ -162,24 +162,21 @@
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <div class="row mb-3">
-              <div class="col-sm-3 col-4 text-center pr-0 d-flex align-items-center justify-content-center">
+              <div class="col-sm-4 col-4 text-center pr-0 d-flex align-items-center justify-content-center">
                 <a href='https://www.facebook.com/milemsia' target='_blank'><img src="../img/MILE-logo-horizontal.png" class="img-fluid" style="max-height:60px;" alt="MILE logo"></a>
               </div>
-              <div class="col-sm-3 col-2 text-center d-flex align-items-center justify-content-center">
+              <div class="col-sm-4 col-4 text-center d-flex align-items-center justify-content-center">
                 <a href='https://studiobehind90.com/' target='_blank'><img src="../img/behind90-logo.png" class="img-fluid" style="max-height:60px;" alt="Studio Behind 90 logo"></a>
               </div>
-              <div class="col-sm-3 col-3 text-center pl-0 d-flex align-items-center justify-content-center">
-                <a href='https://iwpr.net/' target='_blank'><img src="../img/iwpr-logo.png" class="img-fluid" style="max-height:60px;" alt="IWPR logo"></a>
-              </div>
-              <div class="col-sm-3 col-3 text-center pl-0 d-flex align-items-center justify-content-center">
-                <a href='http://www.nationbuildingschool.com/' target='_blank'><img src="../img/nbs-logo.png" class="img-fluid" style="max-height:60px;" alt="NBS logo"></a>
+              <div class="col-sm-4 col-4 text-center pl-0 d-flex align-items-center justify-content-center">
+                <a href='https://newsinitiative.withgoogle.com/' target='_blank'><img src="../img/GNI-logo.png" class="img-fluid" style="max-height:60px;" alt="IWPR logo"></a>
               </div>
             </div> 
-            <p>Diterbitkan oleh <a href='https://www.facebook.com/milemsia' target='_blank'>Malaysia Information Literacy Education (MILE)</a> dan <a href='https://studiobehind90.com/' target='_blank'>Studio Behind 90</a> pada Feb 1, 2021 dengan sokongan daripada <a href='https://iwpr.net/' target='_blank'>Institute for War & Peace Reporting</a> dan <a href='http://www.nationbuildingschool.com/' target='_blank'>Nation Building School</a>.</p>
+            <p>Diterbitkan oleh <a href='https://www.facebook.com/milemsia' target='_blank'>Malaysia Information Literacy Education (MILE)</a> dan <a href='https://studiobehind90.com/' target='_blank'>Studio Behind 90</a> pada 14 Nov 2022 dengan sokongan daripada <a href='https://newsinitiative.withgoogle.com/' target='_blank'>Google News Initiative</a>.</p>
             
             <li class="list-group-item story-links">
               <div>
-                <div class="card-subtitle text-muted">Jurutera</div>
+                <div class="card-subtitle text-muted">Developer</div>
                 <div><a href='https://twitter.com/kuangkeng/' target='_blank'>Kuek Ser Kuang Keng</a></div>
               </div>
             </li> 
@@ -190,17 +187,11 @@
               </div>
             </li> 
             <li class="list-group-item story-links"> 
-               <div>
+              <div>
                 <div class="card-subtitle text-muted">Penulis skrip</div>
-                <div><a href='https://twitter.com/darshkanda' target='_blank'>Darshini Kandasamy</a> & <a href='https://twitter.com/kuangkeng/' target='_blank'>Kuek Ser Kuang Keng</a></div>
+                <div><a href='https://twitter.com/darshkanda' target='_blank'>Darshini Kandasamy</a>, <a href='https://nanyjharon.net/' target='_blank'>Hazwany Jamaluddin</a> & <a href='https://twitter.com/kuangkeng/' target='_blank'>Kuek Ser Kuang Keng</a></div>
               </div>
             </li> 
-            <li class="list-group-item story-links">  
-              <div>
-                <div class="card-subtitle text-muted">Penyelidikan & sokongan</div>
-                <div><a href='https://nanyjharon.net/' target='_blank'>Hazwany Jamaluddin</a></div>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
