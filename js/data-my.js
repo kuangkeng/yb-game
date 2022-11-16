@@ -63,7 +63,7 @@ var dataset = [
 			"text":"<p>Semakin lama, anda semakin menyukainya. Dia muda, cool dan mengikut peredaran masa. Dia pasti akan menjadi YB yang baik!</p>",
 			"img":"../img/story-0/4.svg",
 			"more":1,
-			"info":"<p>Memperkenalkan Kesan Halo/Tanduk</p><p>Hampir setiap daripada kita pernah menghakimi seseorang secara sekilas, menyebabkan kita berasa suka atau tidak suka kepadanya.</p><p>Kesan halo adalah bias yang menyebabkan kita suka kepada seseorang berdasarkan satu ciri positif yang kita percayai,  sementara mengabaikan ciri buruk yang lain. Kesan tanduk pula adalah sebaliknya, apabila kita melihat seseorang secara negatif berdasarkan satu ciri buruk/stereotaip. Ini boleh menyebabkan kita mengabaikan sebarang ciri baik yang dimiliki seseorang.</p><p>Contohnya, menganggap orang-orang yang elok rupa paras sebagai cekap, orang-orang muda sebagai progresif, atau kumpulan-kumpulan tertentu sebagai malas.</p>",
+			"info":"<p>Memperkenalkan Kesan Halo/Tanduk</p><p>Hampir setiap orang pernah menghakimi seseorang secara sekilas, menyebabkan kita berubah perasaan kepadanya.</p><p>Kesan halo bermaksud bias kita kepada seseorang berdasarkan satu ciri positif, sementara mengabaikan ciri buruk yang lain. Kesan tanduk pula adalah sebaliknya dan menyebabkan kita mengabaikan sebarang ciri baik seseorang.</p><p>Contohnya, anggapan orang yang elok paras rupa sebagai cekap, orang muda sebagai progresif, atau golongan tertentu sebagai malas.</p>",
 			"optNum":0,
 			"optImg":1,
 			"opt0":"Seterusnya!",
@@ -174,7 +174,7 @@ var dataset = [
 			"optImg":1,
 			"opt0":"Siapa sangka?",
 			"target0":"scenario-B1-1",
-			"opt1":"Kegiatan kotor!",
+			"opt1":"Benda tak elok!",
 			"target1":"scenario-B1-2",
 		},
 		{

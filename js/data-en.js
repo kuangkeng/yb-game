@@ -27,7 +27,7 @@ var dataset = [
 			"text":"<p>They tell you they'll likely vote for this young, upcoming lawmaker Siti Yasmin who is wildly popular on TikTok. You follow this politician's account too.</p>",
 			"img":"../img/story-0/2.svg",
 			"more":1,
-			"info":"<p>Did you know that social media platforms like TikTok are slowly replacing Google as a search engine for young people? This means more and more folks rely on social media as a source of information, even news. The problem with this is could lead to spread of unverified or one-sided information and fake news.</p>",
+			"info":"<p>Did you know that social media platforms like TikTok are slowly replacing Google as a search engine for young people? This means more and more folks rely on social media as a source of information, even news. The problem with this is that it could lead to the spread of unverified or one-sided information and fake news.</p>",
 			"optNum":0,
 			"optImg":1,
 			"opt0":"Next",
